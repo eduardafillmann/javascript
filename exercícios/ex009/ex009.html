@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionaliade</title>
+</head>
+<body>
+    <h1>Sistema de Verificação de Nacionalidade (SVN)</h1>
+    Eu resido no(a): <input type="text" name="nac" id="inac">
+    <input type="button" value="Verificação" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var vnac = window.document.querySelector('input#inac')
+            var res = window.document.querySelector('div#res')
+            if (vnac.value == 'Brasil') {
+                res.innerHTML = `<p>Sua nacionalidade é <strong>Brasileira</strong>.</p>`
+            }else {
+                res.innerHTML = `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
